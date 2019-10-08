@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+
+     body{
+    background-color: #87ceeb ;
+    }
+
+    div.relative {
+    position: relative;
+    left: 700px;
+    bottom : 150px
+
+    }
+
+
+    </style>
+</head>
+<body>
+
+
+<h3>Plot of PCA components vs variance</h3>
+{{ figure|safe }}
+
+
+
+
+<div class="relative">
+        <form action="{% url 'result_pca' %}">
+            <h3>Select number of components in which you want to divide the features</h3>
+            <input type="text" name="comp" id="comp"><br>
+            <input type="submit">
+
+        </form>
+        </div>
+
+
+</body>
+</html>
